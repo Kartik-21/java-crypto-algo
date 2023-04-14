@@ -18,12 +18,10 @@ public class RsaAlgo {
         KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
         keyPairGenerator.initialize(2048);
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
-        PublicKey publicKey = keyPair.getPublic();
-        PrivateKey privateKey = keyPair.getPrivate();
 
         // Create a Cipher object and initialize it with the public key
         Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-        cipher.init(Cipher.ENCRYPT_MODE, publicKey);
+        cipher.init(Cipher.ENCRYPT_MODE, keyPair.getPublic());
 
         // Encrypt the plaintext
         byte[] ciphertext = cipher.doFinal(msgBytes);
@@ -31,7 +29,7 @@ public class RsaAlgo {
         System.out.println(s);
 
         // Decrypt the ciphertext
-        cipher.init(Cipher.DECRYPT_MODE, privateKey);
+        cipher.init(Cipher.DECRYPT_MODE, keyPair.getPrivate());
         byte[] decryptedText = cipher.doFinal(Base64.getDecoder().decode(s));
 
         String m = new String(decryptedText, StandardCharsets.UTF_8);

@@ -34,8 +34,6 @@ public class AesAlgo {
         // TODO: Generate own 256-bit key
         byte[] key = DigestUtils.sha256("this is my key");
         SecretKeySpec secretKeySpec = new SecretKeySpec(key, "AES");
-        System.out.println(secretKeySpec.getAlgorithm());
-        System.out.println(secretKeySpec.getEncoded());
 
         // Initialize the cipher with the secret key and the encryption mode
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");

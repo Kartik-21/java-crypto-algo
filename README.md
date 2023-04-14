@@ -4,36 +4,35 @@ Java provides various security algorithms as part of its standard cryptographic 
 
 Symmetric Encryption Algorithms:
 These algorithms use the same secret key for both encryption and decryption. Some commonly used symmetric encryption algorithms in Java include:
-
-AES (Advanced Encryption Standard)
-DES (Data Encryption Standard)
-TripleDES (Triple Data Encryption Standard)
-Blowfish
-RC4
+    AES (Advanced Encryption Standard)
+    DES (Data Encryption Standard)
+    TripleDES (Triple Data Encryption Standard)
+    Blowfish
+    RC4
 
 Asymmetric Encryption Algorithms: 
 These algorithms use different keys for encryption and decryption. Some commonly used asymmetric encryption algorithms in Java include:
-
-RSA (Rivest-Shamir-Adleman)
-Diffie-Hellman
-Elliptic Curve Cryptography (ECC)
+    RSA (Rivest-Shamir-Adleman)
+    Diffie-Hellman
+    Elliptic Curve Cryptography (ECC)
 
 Hashing Algorithms: 
 These algorithms generate a fixed-length hash value from an input message. Some commonly used hashing algorithms in Java include:
+    SHA-256 (Secure Hash Algorithm 256)
+    SHA-512 (Secure Hash Algorithm 512)
+    MD5 (Message Digest 5)
 
-SHA-256 (Secure Hash Algorithm 256)
-SHA-512 (Secure Hash Algorithm 512)
-MD5 (Message Digest 5)
-Digital Signature Algorithms: These algorithms are used for signing and verifying digital documents. Some commonly used digital signature algorithms in Java include:
+Digital Signature Algorithms:
+These algorithms are used for signing and verifying digital documents. Some commonly used digital signature algorithms in Java include:
+    RSA with SHA-256
+    DSA (Digital Signature Algorithm)
+    ECDSA (Elliptic Curve Digital Signature Algorithm)
 
-RSA with SHA-256
-DSA (Digital Signature Algorithm)
-ECDSA (Elliptic Curve Digital Signature Algorithm)
 Key Exchange Algorithms: 
 These algorithms are used for securely exchanging keys between two parties. Some commonly used key exchange algorithms in Java include:
+    Diffie-Hellman
+    RSA Key Exchange
 
-Diffie-Hellman
-RSA Key Exchange
 Java also supports other security algorithms such as message authentication codes (MACs), key derivation functions (KDFs), and random number generators (RNGs), among others.
 
 ===========================================================================================================================================================================

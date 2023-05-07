@@ -5,6 +5,8 @@ import java.security.KeyPairGenerator;
 import java.security.Signature;
 
 public class DSADemo {
+
+    //Signature verified using DSA
     public static void main(String[] args) throws Exception {
         // Generate a DSA key pair
         KeyPairGenerator keyGen = KeyPairGenerator.getInstance("DSA");

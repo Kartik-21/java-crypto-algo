@@ -21,6 +21,7 @@ These algorithms generate a fixed-length hash value from an input message. Some 
     SHA-256 (Secure Hash Algorithm 256)
     SHA-512 (Secure Hash Algorithm 512)
     MD5 (Message Digest 5)
+    HMAC
 
 Digital Signature Algorithms:
 These algorithms are used for signing and verifying digital documents. Some commonly used digital signature algorithms in Java include:

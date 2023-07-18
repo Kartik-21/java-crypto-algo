@@ -1,4 +1,4 @@
-package org.example;
+package org.security.hashing;
 
 import org.apache.commons.codec.digest.DigestUtils;
 

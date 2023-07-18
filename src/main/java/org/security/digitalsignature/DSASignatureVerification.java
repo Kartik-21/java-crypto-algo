@@ -1,10 +1,10 @@
-package org.example;
+package org.security.digitalsignature;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.Signature;
 
-public class DSADemo {
+public class DSASignatureVerification {
 
     //Signature verified using DSA
     public static void main(String[] args) throws Exception {

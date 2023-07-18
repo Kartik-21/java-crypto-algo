@@ -1,4 +1,4 @@
-package org.example;
+package org.security.symmetric;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
@@ -8,7 +8,6 @@ import java.nio.charset.StandardCharsets;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 import java.util.Base64;
 
 public class AesAlgo {

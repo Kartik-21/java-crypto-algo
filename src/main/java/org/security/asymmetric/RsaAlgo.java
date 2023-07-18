@@ -1,4 +1,4 @@
-package org.example;
+package org.security.asymmetric;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -22,7 +22,6 @@ public class RsaAlgo {
         // Create a Cipher object and initialize it with the public key
         Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
         cipher.init(Cipher.ENCRYPT_MODE, keyPair.getPublic());
-
         // Encrypt the plaintext
         byte[] ciphertext = cipher.doFinal(msgBytes);
         String s = Base64.getEncoder().encodeToString(ciphertext);

@@ -1,4 +1,4 @@
-package org.example;
+package org.security.symmetric;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;

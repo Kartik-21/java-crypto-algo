@@ -1,4 +1,4 @@
-package org.example;
+package org.security.hashing;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.HmacAlgorithms;
@@ -22,7 +22,7 @@ public class HmacAlgo {
         String hmacString = bytesToHex(hmacBytes);
         System.out.println("HMAC: " + hmacString);
 
-///using apche libery
+        ///using apache library
         HmacUtils hmacUtils = new HmacUtils(HmacAlgorithms.HMAC_SHA_256, key);
         byte[] hmac = hmacUtils.hmac(message.getBytes());
         String hmacHex = Hex.encodeHexString(hmac);

@@ -1,4 +1,4 @@
-package org.security.symmetric;
+package com.security.symmetric;
 
 import org.apache.commons.codec.digest.DigestUtils;
 

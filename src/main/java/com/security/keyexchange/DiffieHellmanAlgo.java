@@ -1,4 +1,4 @@
-package org.security.keyexchange;
+package com.security.keyexchange;
 
 import javax.crypto.KeyAgreement;
 import javax.crypto.interfaces.DHPrivateKey;

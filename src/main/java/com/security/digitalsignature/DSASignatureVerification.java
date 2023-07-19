@@ -1,4 +1,4 @@
-package org.security.digitalsignature;
+package com.security.digitalsignature;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;

@@ -1,4 +1,4 @@
-package org.security.hashing;
+package com.security.hashing;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.HmacAlgorithms;

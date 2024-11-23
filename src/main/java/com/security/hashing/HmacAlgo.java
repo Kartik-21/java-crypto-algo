@@ -9,6 +9,9 @@ import javax.crypto.spec.SecretKeySpec;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * get the hash value with the key
+ */
 public class HmacAlgo {
     public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeyException {
         String message = "Kartik";

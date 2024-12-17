@@ -1,4 +1,4 @@
-package com.security.hashing;
+package com.kartik.hashing;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -8,20 +8,25 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class MdSha {
+/**
+ * generate the hash value based on the algorithm
+ */
+public class MdShaAlgo {
     public static void main(String[] args) throws NoSuchAlgorithmException {
-        String msg = "Kartik";
-        byte[] msgBytes = msg.getBytes(StandardCharsets.UTF_8);
 
+        String message = "Kartik";
+        byte[] messageBytes = message.getBytes(StandardCharsets.UTF_8);
 
-         /**
-          MD5: This is the original version of the MD5 algorithm, and it generates a 128-bit hash value.
-          MD5-96: This version of the algorithm generates a 96-bit hash value, which is truncated from the original 128-bit hash value. It is often used in IPsec protocols.
-          MD5-hmac: This is a keyed-hash message authentication code (HMAC) version of the MD5 algorithm, which is used for verifying the authenticity of a message.
-        * */
+        /**
+         MD5: This is the original version of the MD5 algorithm, and it generates a 128-bit hash value.
+         MD5-96: This version of the algorithm generates a 96-bit hash value, which is truncated from the original 128-bit hash value. It is often used in IPsec protocols.
+         MD5-hmac: This is a keyed-hash message authentication code (HMAC) version of the MD5 algorithm, which is used for verifying the authenticity of a message.
+         * */
 
-        ///TODO: using apache liberty md5
-        String md5Hex = DigestUtils.md5Hex(msg);
+        //TODO: using apache liberty md5
+        String md2Hex = DigestUtils.md2Hex(message);
+        System.out.println(md2Hex);
+        String md5Hex = DigestUtils.md5Hex(message);
         System.out.println(md5Hex);
 
 
@@ -32,23 +37,20 @@ public class MdSha {
          SHA-3: This is the most recent addition to the SHA family of hash functions. It includes four different versions, SHA-3-224, SHA-3-256, SHA-3-384, and SHA-3-512, and is designed to be more secure and resistant to cryptanalysis than the earlier versions.
          * */
 
-        ////TODO: using own function SHA-2
+        //TODO: using java function SHA-2
         MessageDigest messageDigest = MessageDigest.getInstance("SHA-512");
-        byte[] digest = messageDigest.digest(msgBytes);
+        byte[] digest = messageDigest.digest(messageBytes);
         System.out.println(toHexString(digest));
 
-        ///TODO: using apache liberty SHA-2
-        String sha512Hex = DigestUtils.sha512Hex(msg);
+        //TODO: using apache liberty SHA-2
+        String sha512Hex = DigestUtils.sha512Hex(message);
         System.out.println(sha512Hex);
 
-        ///TODO: using apache liberty SHA-3 (AVAILABLE IN NEW VERSION JAVA)
-        byte[] sha3512Hex = DigestUtils.sha3_512(msg);
-        String encodeHexString = Hex.encodeHexString(sha3512Hex);
-        System.out.println(encodeHexString);
+        //TODO: using apache liberty SHA-3 (AVAILABLE IN NEW VERSION JAVA)
+        byte[] sha3_512 = DigestUtils.sha3_512(message);
+        System.out.println(Hex.encodeHexString(sha3_512));
 
-        System.out.println(DigestUtils.sha3_512Hex(msg));
-
-
+        System.out.println(DigestUtils.sha3_512Hex(message));
     }
 
     public static String toHexString(byte[] hash) {

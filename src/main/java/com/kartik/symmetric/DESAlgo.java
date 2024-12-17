@@ -1,10 +1,11 @@
-package com.security.symmetric;
+package com.kartik.symmetric;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 
+//not used now
 public class DESAlgo {
     public static void main(String[] args) throws Exception {
         String plaintext = "This is a secret message";
@@ -37,7 +38,7 @@ public class DESAlgo {
         byte[] bytes = new byte[len / 2];
         for (int i = 0; i < len; i += 2) {
             bytes[i / 2] = (byte) ((Character.digit(hexString.charAt(i), 16) << 4)
-                                 + Character.digit(hexString.charAt(i+1), 16));
+                    + Character.digit(hexString.charAt(i + 1), 16));
         }
         return bytes;
     }
